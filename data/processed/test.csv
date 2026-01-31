@@ -1,0 +1,1001 @@
+query,intent
+Payment issue with my account ASAP,payment_issues
+"I would like to Don't ship my order, cancel it urgently",order_cancellation
+"please, account locked!",account_issues
+Could you Login credentials not working immediately,account_issues
+"hello, ground shipping urgently",shipping_inquiry
+Shipping charges,shipping_inquiry
+I need to Very disappointed with the service thanks,complaint
+i would like to expedite my refund urgently,refund_status
+i want to delivery fee right away,shipping_inquiry
+"hello, i changed my mind, cancel my order immediately",order_cancellation
+"Please, My payment was rejected now",payment_issues
+"Hi, Account settings immediately",account_issues
+Would you Tell me about this product!,product_information
+could you i no longer want this order please,order_cancellation
+"Hey, 30 day return please",return_exchange
+Can I Shipping time ASAP,shipping_inquiry
+i want to ground shipping please,shipping_inquiry
+"Hey, Contact information?",general_inquiry
+"hello, connect me to support ASAP",general_inquiry
+how do i where is my delivery?.,order_status
+"hey, i want to speak to a manager immediately",complaint
+My card isn't working?,payment_issues
+I would like to Refund taking too long immediately,refund_status
+Is it possible to Return policy immediately,return_exchange
+i would like to did my order ship yet? thanks,order_status
+"hello, i need to complain thank you",complaint
+"excuse me, verification code not received thank you",account_issues
+i need to where is my package??,order_status
+could you i'm very unhappy,complaint
+I would like to Two factor authentication issue!,account_issues
+"hello, can someone help me? right away",general_inquiry
+is it possible to expedited shipping.,shipping_inquiry
+This is fraud,complaint
+"Hello, Can you track my order? immediately",order_status
+Could you Is it too late to cancel? please,order_cancellation
+Could you Partial refund received thank you,refund_status
+"Please, Where is my refund? immediately",refund_status
+Would you Start a return immediately,return_exchange
+i would like to i want my order cancelled today thanks,order_cancellation
+How do I return an item?,return_exchange
+i need to payment not accepted thanks,payment_issues
+i want to reimburse me right away,refund_status
+could you payment error.,payment_issues
+I want to cancel my order please,order_cancellation
+could you shipping discount ASAP,shipping_inquiry
+"Excuse me, Refund not received right away",refund_status
+can i product malfunction?,complaint
+Shipping cost,shipping_inquiry
+"hello, delete my account ASAP",account_issues
+"excuse me, account settings urgently",account_issues
+"hi, item arrived damaged urgently",complaint
+Could you Refund processing time thank you,refund_status
+"Wrong size, need exchange.",return_exchange
+i want to schedule a return please,return_exchange
+"Hi, Refund amount incorrect urgently",refund_status
+Please help me cancel my order,order_cancellation
+Quick question,general_inquiry
+"Please, I need information now",general_inquiry
+I need customer service!,general_inquiry
+"hello, where is my order? now",order_status
+how do i payment gateway error thanks,payment_issues
+i would like to where is my delivery? now,order_status
+is it possible to i want to file a complaint thank you,complaint
+Double charged on my card ASAP,payment_issues
+Please process a cancellation,order_cancellation
+"hello, i need information?",general_inquiry
+"How do I I accidentally ordered, please cancel please",order_cancellation
+Is this item available?,product_information
+"please, replace my item!",return_exchange
+i would like to product dimensions urgently,product_information
+i would like to password reset right away,account_issues
+Would you Delivery status please now,order_status
+"hello, terrible customer service urgently",complaint
+"hello, payment problem ASAP",payment_issues
+"excuse me, money back please urgently",refund_status
+Expedite my refund.,refund_status
+"I want to I accidentally ordered, please cancel right away",order_cancellation
+"hi, shipping methods please",shipping_inquiry
+how do i next day delivery right away,shipping_inquiry
+"Please, Shipping discount urgently",shipping_inquiry
+"Please, How do I return an item?!",return_exchange
+"hello, cancel my latest purchase!",order_cancellation
+Bad experience,complaint
+how do i payment keeps failing urgently,payment_issues
+"Hey, Cancel my order please!",order_cancellation
+How do I Expedited shipping immediately,shipping_inquiry
+How do I How to use this product? thanks,product_information
+"Hello, Payment problem.",payment_issues
+How to return?,return_exchange
+would you i'm frustrated right away,complaint
+can i refund request status?,refund_status
+i would like to false advertising!,complaint
+"Hey, Help me please",general_inquiry
+i would like to delivery cost estimate!,shipping_inquiry
+"Please, Payment problem.",payment_issues
+i need to my card isn't working please,payment_issues
+"hey, i'm very unhappy thanks",complaint
+can i shipping cost thanks,shipping_inquiry
+"hey, start a return now",return_exchange
+Product dimensions,product_information
+i want to update account information,account_issues
+i would like to account not working now,account_issues
+how do i my account is blocked thanks,account_issues
+I need to I can't log in ASAP,account_issues
+i would like to stop my order now,order_cancellation
+"Hi, Debit card declined?",payment_issues
+could you cancel the items in my order urgently,order_cancellation
+would you express shipping now,shipping_inquiry
+"hello, track my order.",order_status
+How do I What products do you have? thank you,product_information
+i want to first time customer,general_inquiry
+I need to Same day delivery ASAP,shipping_inquiry
+could you hello please,general_inquiry
+I would like to I need help thank you,general_inquiry
+"please, i feel cheated",complaint
+"hello, package tracking request!",order_status
+"excuse me, payment error?",payment_issues
+Account recovery,account_issues
+Update account information,account_issues
+Would you Free delivery threshold thank you,shipping_inquiry
+i need to quality is very poor now,complaint
+Could you New arrivals immediately,product_information
+"Hey, Stop my order?",order_cancellation
+i would like to shipping discount.,shipping_inquiry
+is it possible to what colors does it come in? immediately,product_information
+Please void my order!,order_cancellation
+What are the product details?.,product_information
+I haven't received my refund urgently,refund_status
+"hey, bad experience please",complaint
+"Hi, Unlock my account.",account_issues
+i would like to delete my account?,account_issues
+How do I Do you have this in stock? thanks,product_information
+Delivery fee!,shipping_inquiry
+"excuse me, where is my refund??",refund_status
+I want to cancel the order I just placed!,order_cancellation
+I need to Can't complete payment please,payment_issues
+"hi, refund inquiry thanks",refund_status
+i would like to exchange for different size right away,return_exchange
+I want to Cancel my latest purchase now,order_cancellation
+how do i product dimensions,product_information
+"hi, can you track my order? right away",order_status
+could you profile update!,account_issues
+Is it possible to When will I get my refund? please,refund_status
+Can I Where is my package? thanks,order_status
+Expedited shipping,shipping_inquiry
+"Hey, I want to revoke my order!",order_cancellation
+could you i'm frustrated now,complaint
+"hey, i want to file a complaint now",complaint
+could you is this item available? urgently,product_information
+"please, can't complete payment urgently",payment_issues
+Could you Partial refund received immediately,refund_status
+"Please, Where is my order? right away",order_status
+Where is my refund?,refund_status
+can i account security concern urgently,account_issues
+I need to Create new password thanks,account_issues
+I need to How to return? ASAP,return_exchange
+is it possible to when can i expect my delivery?!,order_status
+Is it possible to I'd like to cancel before it ships?,order_cancellation
+"hi, shipping options now",shipping_inquiry
+Could you Account hacked urgently,account_issues
+is it possible to where is my delivery? ASAP,order_status
+"hi, can you cancel my order for me? immediately",order_cancellation
+"Hello, I want to file a complaint.",complaint
+"Excuse me, My order is taking too long.",order_status
+I need to Horrible experience right away,complaint
+i need to shipping methods.,shipping_inquiry
+Could you Waiting for refund now,refund_status
+Could you Refund status,refund_status
+i would like to login problem right away,account_issues
+"Hi, Return window thank you",return_exchange
+"Hi, Profile update immediately",account_issues
+would you billing issue immediately,payment_issues
+Is it possible to How does this product work? right away,product_information
+"hello, what's included in the package? please",product_information
+"Excuse me, Is anyone there? thank you",general_inquiry
+"hey, the product is broken ASAP",complaint
+"can i wrong order, please cancel urgently",order_cancellation
+"Hello, Payment stuck ASAP",payment_issues
+"hi, refund timeline?",refund_status
+can i return policy right away,return_exchange
+I need to Reset my password urgently,account_issues
+How do I More info about the item immediately,product_information
+How to use this product?,product_information
+"hello, i need this order cancelled right away",order_cancellation
+"Excuse me, When will I get my refund? thank you",refund_status
+Is it possible to International shipping!,shipping_inquiry
+How do I Forgot password please,account_issues
+"hi, refund not received?",refund_status
+What's the status of my order? right away,order_status
+"hey, did my order ship yet? immediately",order_status
+"Hey, Good morning.",general_inquiry
+can i i have a question ASAP,general_inquiry
+Could you When was refund issued? urgently,refund_status
+could you change my phone number.,account_issues
+i want to i'm very unhappy thank you,complaint
+"hey, i want to send this back please",return_exchange
+How do I My card isn't working urgently,payment_issues
+I need to Cancel the items in my order,order_cancellation
+I need to Information needed please,general_inquiry
+i want to account recovery ASAP,account_issues
+I need to What's the status of my order?,order_status
+i need to can i return this product? immediately,return_exchange
+Update account information ASAP,account_issues
+i need to refund and return immediately,return_exchange
+could you free returns? immediately,return_exchange
+could you cancel my order immediately immediately,order_cancellation
+I want to Can't access my account thank you,account_issues
+I need to Return my order thank you,return_exchange
+could you check my order status please,order_status
+I want to Credit not received now,refund_status
+Would you International shipping.,shipping_inquiry
+could you where is my refund?!,refund_status
+Payment problem,payment_issues
+is it possible to customer support thanks,general_inquiry
+how do i exchange for different size!,return_exchange
+"hey, can't process my payment right away",payment_issues
+would you i need to cancel an order,order_cancellation
+i want to can i cancel my order? thanks,order_cancellation
+I need to Where is my order? thank you,order_status
+"hello, help me please thanks",general_inquiry
+i would like to can someone help me? thank you,general_inquiry
+Can I Delivery status please.,order_status
+"hello, i accidentally ordered, please cancel immediately",order_cancellation
+how do i partial refund received ASAP,refund_status
+can i return shipping!,return_exchange
+I would like to The product is broken,complaint
+"please, what sizes are available? please",product_information
+Quality is very poor!,complaint
+When is refund processed?,refund_status
+"hi, hi there urgently",general_inquiry
+"hi, what sizes are available? thank you",product_information
+i would like to return shipping.,return_exchange
+how do i refund not received.,refund_status
+I want to speak to a manager!,complaint
+"Hi, Schedule a return urgently",return_exchange
+How do I Full refund please?,refund_status
+"Hey, Create new password thank you",account_issues
+Is my order on the way?,order_status
+i want to express shipping urgently,shipping_inquiry
+i want to how to return?.,return_exchange
+"hello, exchange for different size!",return_exchange
+i want to what sizes are available? thanks,product_information
+Would you Reimburse me immediately,refund_status
+Would you Ship to different address now,shipping_inquiry
+Could you Ship to different address,shipping_inquiry
+Cancel the items in my order thanks,order_cancellation
+Quality issue return,return_exchange
+Delivery cost estimate,shipping_inquiry
+Could you Item availability urgently,product_information
+"hey, poor quality product thank you",complaint
+"hi, free delivery threshold please",shipping_inquiry
+"hi, new here.",general_inquiry
+i want to i'm frustrated please,complaint
+"hello, hello urgently",general_inquiry
+"hey, login credentials not working immediately",account_issues
+"hello, refund pending!",refund_status
+I need to Poor quality product please,complaint
+would you i want to send this back?,return_exchange
+Would you Weekend delivery? thanks,shipping_inquiry
+how do i what products do you have? ASAP,product_information
+would you general help immediately,general_inquiry
+How do I Account settings!,account_issues
+How do I cancel my order? immediately,order_cancellation
+i would like to refund inquiry.,refund_status
+"Hey, What are the product details? urgently",product_information
+Can I cancel my order?.,order_cancellation
+i need to payment unsuccessful please,payment_issues
+can i billing issue now,payment_issues
+would you merge accounts now,account_issues
+i want to return label request thank you,return_exchange
+I would like to Can't pay for my order ASAP,payment_issues
+is it possible to human agent please ASAP,general_inquiry
+"hello, i need assistance thanks",general_inquiry
+Could you Debit card declined!,payment_issues
+can i expedite my refund now,refund_status
+I would like to When is refund processed? ASAP,refund_status
+Connect me to support immediately,general_inquiry
+International shipping,shipping_inquiry
+I want to This is not what I ordered please,complaint
+is it possible to check refund status,refund_status
+I would like to Expected delivery date?,order_status
+"Please, Expedite my refund urgently",refund_status
+"Please, Checkout error right away",payment_issues
+can i do you have this in stock?.,product_information
+i want to quality issue return!,return_exchange
+i need to not as described.,complaint
+"hello, account not working immediately",account_issues
+Is it possible to Cancel my latest purchase please,order_cancellation
+"hi, change password.",account_issues
+is it possible to reimburse me urgently,refund_status
+i need to charged but no confirmation thanks,payment_issues
+"please, how much is shipping? thank you",shipping_inquiry
+could you i'm very unhappy thank you,complaint
+could you is my order on the way? now,order_status
+"hey, product doesn't work?",complaint
+"Please, Return request urgently",return_exchange
+i would like to payment problem thank you,payment_issues
+is it possible to has my order shipped? please,order_status
+is it possible to how does this product work?!,product_information
+could you unlock my account immediately,account_issues
+Could you Not as described thanks,complaint
+how do i tell me about this product right away,product_information
+Fastest shipping option,shipping_inquiry
+My refund is delayed,refund_status
+i want to payment keeps failing ASAP,payment_issues
+"please, delivery cost estimate urgently",shipping_inquiry
+would you please void my order urgently,order_cancellation
+Can I How to use this product?.,product_information
+I need to Product reviews!,product_information
+i need to charged but no confirmation!,payment_issues
+Refund not showing,refund_status
+Can I What products do you have?!,product_information
+Would you Return pickup!,return_exchange
+can i i need to know where my order is,order_status
+i need to can't complete payment ASAP,payment_issues
+Can I Change shipping address right away,shipping_inquiry
+i would like to verification code not received ASAP,account_issues
+i would like to i have a question thank you,general_inquiry
+i need to credit card issue.,payment_issues
+Very bad service immediately,complaint
+Can you track my order? ASAP,order_status
+I need to What's the warranty on this? urgently,product_information
+Credit not received,refund_status
+i need to i need to know where my order is immediately,order_status
+how do i hi there thanks,general_inquiry
+Could you Priority shipping?,shipping_inquiry
+i need to ship to different address now,shipping_inquiry
+would you email not recognized urgently,account_issues
+How do I Product quality now,product_information
+I need to Tell me about this product,product_information
+would you good morning ASAP,general_inquiry
+"hello, when was refund issued?",refund_status
+"excuse me, payment gateway error thank you",payment_issues
+"hey, refund amount incorrect please",refund_status
+would you did my order ship yet? immediately,order_status
+"hey, product is defective!",complaint
+"hey, can i swap this? immediately",return_exchange
+"Hey, Product features thanks",product_information
+"hey, merge accounts please",account_issues
+"excuse me, poor quality product now",complaint
+"hello, return shipping right away",return_exchange
+"Hey, Error during payment urgently",payment_issues
+I want to Checkout error please,payment_issues
+"excuse me, what sizes are available? ASAP",product_information
+Order tracking thanks,order_status
+i would like to shipment status,order_status
+Refund inquiry,refund_status
+i need to please help me cancel my order thank you,order_cancellation
+I need to Track my order thank you,order_status
+i want to i want my order cancelled today immediately,order_cancellation
+Would you Shipping zones now,shipping_inquiry
+Quality is very poor thank you,complaint
+how do i how does this work?,general_inquiry
+can i good afternoon!,general_inquiry
+"please, account recovery right away",account_issues
+i would like to compare products thank you,product_information
+i would like to i'm very unhappy,complaint
+"Would you Wrong order, please cancel thanks",order_cancellation
+i would like to money deducted but order failed urgently,payment_issues
+"Please, General help?",general_inquiry
+"please, item availability thanks",product_information
+can i is my order on the way? ASAP,order_status
+would you i need help thanks,general_inquiry
+i need to shipping options please,shipping_inquiry
+is it possible to i haven't received my refund?,refund_status
+"hi, i changed my mind, cancel my order now",order_cancellation
+"Hi, Debit card declined now",payment_issues
+i want to new arrivals.,product_information
+Delivery options,shipping_inquiry
+"Excuse me, Contact information now",general_inquiry
+"Hey, Sign in issues!",account_issues
+"please, cancel order thanks",order_cancellation
+how do i ship to different address ASAP,shipping_inquiry
+What sizes are available?,product_information
+i would like to my payment didn't go through right away,payment_issues
+"excuse me, what's included in the package? now",product_information
+i would like to i demand compensation.,complaint
+"Hey, Update account information!",account_issues
+could you delivery options.,shipping_inquiry
+"hello, create new password",account_issues
+Is it possible to When will I get my refund? immediately,refund_status
+i need to can't complete payment?,payment_issues
+is it possible to is my order on the way? urgently,order_status
+"hey, customer support thanks",general_inquiry
+"Hello, Change shipping address urgently",shipping_inquiry
+i need to i need to complain ASAP,complaint
+"hello, authentication failed?",account_issues
+"hey, what's the status of my order?!",order_status
+"hello, how can i contact you? right away",general_inquiry
+Check my order status,order_status
+Is it possible to Order tracking urgently,order_status
+"excuse me, refund to bank account?",refund_status
+can i product recommendations thanks,product_information
+Is it possible to Return shipping,return_exchange
+is it possible to i need information?,general_inquiry
+"Hey, Shipping charges thanks",shipping_inquiry
+"Please, I'd like to cancel before it ships urgently",order_cancellation
+"hello, more info about the item?",product_information
+"hey, track my order ASAP",order_status
+Would you Help with payment problem thanks,payment_issues
+would you refund taking too long.,refund_status
+"hi, i need to cancel an order urgently",order_cancellation
+how do i i can't log in urgently,account_issues
+Can I Payment not accepted now,payment_issues
+"Hi, Reimburse me?",refund_status
+i want to money back please?,refund_status
+"please, is anyone there? immediately",general_inquiry
+how do i product specifications.,product_information
+How do I Cancel order?,order_cancellation
+i would like to is anyone there?.,general_inquiry
+would you how do i cancel my order?!,order_cancellation
+could you refund processing time please,refund_status
+I need to I need my money back now,refund_status
+Weekend delivery? thanks,shipping_inquiry
+"hi, account security concern thanks",account_issues
+"Hey, Sign in issues ASAP",account_issues
+"is it possible to wrong size, need exchange urgently",return_exchange
+Would you Return policy urgently,return_exchange
+"hello, payment problem please",payment_issues
+could you quality is very poor thank you,complaint
+"Hello, Delivery cost estimate?",shipping_inquiry
+Is it possible to Is my order on the way?,order_status
+I'm frustrated,complaint
+"excuse me, missing items in my order ASAP",complaint
+"Excuse me, Quality issue return immediately",return_exchange
+i want to refund not showing.,refund_status
+When can I expect my delivery?,order_status
+Economy shipping!,shipping_inquiry
+is it possible to i'm waiting for my order thank you,order_status
+"Please, Hi there",general_inquiry
+would you more info about the item thank you,product_information
+Would you I want to return this,return_exchange
+would you best seller products,product_information
+"hello, cancel order now",order_cancellation
+could you refund status,refund_status
+i need to shipping time,shipping_inquiry
+would you can't process my payment!,payment_issues
+how do i general help right away,general_inquiry
+"Hey, Is this product good? immediately",product_information
+"i need to i changed my mind, cancel my order.",order_cancellation
+I received a damaged item,complaint
+"hey, contact information urgently",general_inquiry
+"hi, reset my password right away",account_issues
+"please, forgot password!",account_issues
+could you shipment status thank you,order_status
+Refund to bank account,refund_status
+"please, i need assistance immediately",general_inquiry
+"hi, connect me to support?",general_inquiry
+i want to refund processing time immediately,refund_status
+how do i account security concern now,account_issues
+Can I Product doesn't work right away,complaint
+could you waiting for refund thank you,refund_status
+Could you Priority shipping please,shipping_inquiry
+Payment issue with my account!,payment_issues
+i need to how long for refund?,refund_status
+I want to Did my order ship yet??,order_status
+"Please, Reset my password please",account_issues
+I would like to Can someone help me? thank you,general_inquiry
+"could you i accidentally ordered, please cancel",order_cancellation
+"please, return my order",return_exchange
+Would you Change password!,account_issues
+Is anyone there?,general_inquiry
+how do i can you help me?.,general_inquiry
+could you wrong item received?,complaint
+"excuse me, can't access my account immediately",account_issues
+"please, good morning now",general_inquiry
+"hello, i want to speak to a manager ASAP",complaint
+I need to Schedule a return ASAP,return_exchange
+I want to Exchange for store credit please,return_exchange
+"please, merge accounts ASAP",account_issues
+"Hello, I'm very unhappy.",complaint
+is it possible to shipping cost,shipping_inquiry
+I need to complain,complaint
+i need to product origin urgently,product_information
+Free returns?!,return_exchange
+Quality is very poor ASAP,complaint
+"Hi, Problem with checkout ASAP",payment_issues
+could you forgot password please,account_issues
+Product origin,product_information
+"hello, i want to track my package now",order_status
+"excuse me, delivery cost estimate urgently",shipping_inquiry
+Would you Double charged on my card urgently,payment_issues
+i want to i need to know where my order is!,order_status
+is it possible to track my recent order,order_status
+could you credit not received.,refund_status
+Would you Please process a cancellation,order_cancellation
+Is it possible to International shipping.,shipping_inquiry
+"excuse me, refund request status?",refund_status
+Is it possible to What's the warranty on this? thanks,product_information
+"hello, thank you please",general_inquiry
+Could you Free shipping?!,shipping_inquiry
+Can I This is fraud.,complaint
+Can't pay for my order,payment_issues
+i want to product recommendations immediately,product_information
+"Hello, Not as described immediately",complaint
+"hello, standard shipping immediately",shipping_inquiry
+would you my order is taking too long now,order_status
+i need to package tracking request please,order_status
+Email not recognized,account_issues
+"please, when can i expect my delivery? right away",order_status
+could you merge accounts?,account_issues
+could you package tracking request.,order_status
+Could you Can I still cancel my order? thank you,order_cancellation
+I need to Payment unsuccessful thanks,payment_issues
+how do i money back please!,refund_status
+"excuse me, product quality please",product_information
+i would like to product malfunction right away,complaint
+Can I New arrivals right away,product_information
+I would like to I need my money back please,refund_status
+Product is defective thank you,complaint
+Would you I was charged twice please,payment_issues
+Is this compatible with...? urgently,product_information
+What products do you have? thank you,product_information
+i would like to can i return this product?!,return_exchange
+"please, someone else accessing my account!",account_issues
+i need to this is fraud immediately,complaint
+I would like to General help,general_inquiry
+Is it possible to Can you help me?!,general_inquiry
+how do i delivery options ASAP,shipping_inquiry
+"Excuse me, Is this genuine product? please",product_information
+i want to my payment was rejected now,payment_issues
+Is it possible to Payment error urgently,payment_issues
+Would you I need to cancel an order ASAP,order_cancellation
+I would like to The product is broken?,complaint
+would you i need my money back thanks,refund_status
+"Excuse me, Terrible customer service thank you",complaint
+I need to Account settings urgently,account_issues
+I want to cancel the order I just placed ASAP,order_cancellation
+"excuse me, billing issue right away",payment_issues
+"please, i no longer want this order thank you",order_cancellation
+I would like to Package tracking request thank you,order_status
+"Hi, Two factor authentication issue right away",account_issues
+How does this product work?,product_information
+i need to account settings urgently,account_issues
+can i check my order status urgently,order_status
+i would like to credit card issue thanks,payment_issues
+Is it possible to Order tracking!,order_status
+I would like to I need to know where my order is?,order_status
+Could you General question right away,general_inquiry
+Ship to different address,shipping_inquiry
+The product is broken,complaint
+Delivery status please immediately,order_status
+"hey, return damaged product immediately",return_exchange
+My account is blocked thank you,account_issues
+Replace my item,return_exchange
+"Hey, Free returns?!",return_exchange
+can i cancel my latest purchase immediately,order_cancellation
+i want to i want to revoke my order?,order_cancellation
+i need to how does this product work? please,product_information
+Contact information thanks,general_inquiry
+Payment keeps failing right away,payment_issues
+"would you item doesn't fit, return please",return_exchange
+"Hi, I changed my mind, cancel my order!",order_cancellation
+"Please, I want to file a complaint please",complaint
+would you shipping options please,shipping_inquiry
+is it possible to cancellation request for my order immediately,order_cancellation
+"excuse me, debit card declined urgently",payment_issues
+Can't complete payment,payment_issues
+Connect me to support,general_inquiry
+I need to Money deducted but order failed!,payment_issues
+i need to shipping zones urgently,shipping_inquiry
+"please, i need this order cancelled thank you",order_cancellation
+"Hi, Exchange for store credit please",return_exchange
+How do I Standard shipping now,shipping_inquiry
+Would you Delivery cost estimate thanks,shipping_inquiry
+Could you Cancel my order immediately urgently,order_cancellation
+"please, what sizes are available? now",product_information
+how do i weekend delivery??,shipping_inquiry
+Can I Partial refund received urgently,refund_status
+"excuse me, i was charged twice thanks",payment_issues
+how do i schedule a return thanks,return_exchange
+Could you I need customer service urgently,general_inquiry
+Could you Shipping time ASAP,shipping_inquiry
+I haven't received my refund now,refund_status
+"hello, priority shipping?",shipping_inquiry
+"Hello, Horrible experience!",complaint
+i want to account security concern?,account_issues
+is it possible to return request right away,return_exchange
+"excuse me, how to use this product? now",product_information
+I would like to Compare products ASAP,product_information
+would you refund taking too long right away,refund_status
+Billing issue!,payment_issues
+"Excuse me, What's the status of my order? ASAP",order_status
+"Please, I want to send this back right away",return_exchange
+would you expedited shipping urgently,shipping_inquiry
+Can I Payment error.,payment_issues
+Can I Support request urgently,general_inquiry
+"Hey, The product is broken urgently",complaint
+Shipment status,order_status
+could you same day delivery immediately,shipping_inquiry
+i want to false advertising thank you,complaint
+"Hi, Ground shipping immediately",shipping_inquiry
+i want to good morning now,general_inquiry
+"hi, how can i contact you? right away",general_inquiry
+I need to Card declined now,payment_issues
+"Please, Can you cancel my order for me? urgently",order_cancellation
+"Please, Replace my item!",return_exchange
+I need to exchange this!,return_exchange
+"Excuse me, Product recommendations thank you",product_information
+I want to When will I receive my order? thank you,order_status
+Return label request,return_exchange
+i want to double charged on my card please,payment_issues
+is it possible to what happened to my order? immediately,order_status
+"please, how much is shipping? now",shipping_inquiry
+Refund processing time,refund_status
+"Hello, Full refund please?",refund_status
+"Hello, Product recommendations!",product_information
+"hi, refund confirmation right away",refund_status
+Can I Order tracking now,order_status
+Would you Connect me to support thanks,general_inquiry
+"Hello, Exchange for different size please",return_exchange
+Return pickup,return_exchange
+I want to Initiate return.,return_exchange
+Create new password,account_issues
+"hi, payment failed ASAP",payment_issues
+"please, express shipping!",shipping_inquiry
+Hello immediately,general_inquiry
+I need to Help me please,general_inquiry
+"excuse me, how do i cancel my order?",order_cancellation
+Transaction failed?,payment_issues
+"hi, good morning immediately",general_inquiry
+I would like to Update account information immediately,account_issues
+i want to account recovery,account_issues
+"please, payment failed ASAP",payment_issues
+is it possible to refund pending thanks,refund_status
+could you forgot password right away,account_issues
+Cancel my latest purchase thanks,order_cancellation
+i would like to product malfunction.,complaint
+i would like to return pickup right away,return_exchange
+How do I Is it too late to cancel? thank you,order_cancellation
+"Hey, Refund not showing immediately",refund_status
+"Excuse me, My account is blocked?",account_issues
+How do I Shipping cost now,shipping_inquiry
+i would like to product quality,product_information
+"hey, update my email?",account_issues
+"excuse me, two factor authentication issue now",account_issues
+Could you Shipping methods!,shipping_inquiry
+Could you First time customer thank you,general_inquiry
+"please, business hours right away",general_inquiry
+"Excuse me, Product features please",product_information
+could you payment not accepted.,payment_issues
+"excuse me, return window please",return_exchange
+could you card declined thanks,payment_issues
+Package tracking request,order_status
+How do I Product is defective urgently,complaint
+Is it possible to Can you track my order??,order_status
+can i worst experience ever immediately,complaint
+"please, return damaged product please",return_exchange
+"hello, reset my password thank you",account_issues
+"hey, account settings immediately",account_issues
+Change shipping address,shipping_inquiry
+I would like to Can you track my order?!,order_status
+"please, missing items in my order!",complaint
+"hello, cancel order immediately",order_cancellation
+Can I Can't access my account right away,account_issues
+Could you Is this genuine product? ASAP,product_information
+What colors does it come in? thanks,product_information
+"hi, authentication failed.",account_issues
+"excuse me, checkout error",payment_issues
+I need to What products do you have? ASAP,product_information
+could you where is my delivery? thanks,order_status
+could you my order is taking too long immediately,order_status
+"Hi, Update my email.",account_issues
+Check my order status urgently,order_status
+This is unacceptable,complaint
+How do I Cancellation request for my order.,order_cancellation
+is it possible to hello ASAP,general_inquiry
+"Hello, Update account information right away",account_issues
+"hey, please void my order immediately",order_cancellation
+Return request,return_exchange
+"please, technical specifications!",product_information
+can i cancel my order please thank you,order_cancellation
+I would like to I need to cancel an order please,order_cancellation
+how do i i want to return this ASAP,return_exchange
+"please, very disappointed with the service ASAP",complaint
+"Hello, I need help thanks",general_inquiry
+i would like to i'd like to exchange.,return_exchange
+Not as described,complaint
+"hey, how do i return an item? please",return_exchange
+is it possible to do you have this in stock? thanks,product_information
+would you new arrivals ASAP,product_information
+I demand compensation,complaint
+"Please, Forgot password thanks",account_issues
+I need help now,general_inquiry
+"hey, i need customer service",general_inquiry
+would you return label request immediately,return_exchange
+can i return damaged product urgently,return_exchange
+i want to product malfunction thank you,complaint
+Payment error ASAP,payment_issues
+can i how much is shipping? now,shipping_inquiry
+"Hello, How to use this product?",product_information
+"Hey, Cancel order?",order_cancellation
+Terrible customer service please,complaint
+i would like to payment error ASAP,payment_issues
+Could you Quality issue return ASAP,return_exchange
+Is it possible to Cancellation request for my order.,order_cancellation
+"please, wrong size, need exchange now",return_exchange
+"Please, Can't complete payment",payment_issues
+Cancel my order immediately urgently,order_cancellation
+"Please, When does my order arrive? urgently",order_status
+"Hello, I want to speak to a manager!",complaint
+"hi, technical specifications right away",product_information
+how do i full refund please!,refund_status
+would you profile update thank you,account_issues
+can i new here thank you,general_inquiry
+I want to Item arrived damaged thanks,complaint
+"hello, refund pending thank you",refund_status
+"excuse me, return policy",return_exchange
+I want to Tell me about this product!,product_information
+i need to what's the warranty on this? urgently,product_information
+Can I Compare products urgently,product_information
+"i want to wrong order, please cancel",order_cancellation
+how do i shipping charges now,shipping_inquiry
+"hey, email not recognized thank you",account_issues
+can i someone else accessing my account right away,account_issues
+This is unacceptable please,complaint
+"hello, change shipping address urgently",shipping_inquiry
+i want to refund confirmation!,refund_status
+"Hey, This is fraud!",complaint
+"please, free delivery threshold immediately",shipping_inquiry
+would you did my order ship yet?!,order_status
+would you where is my package? now,order_status
+i need to stop my order?,order_cancellation
+i need to refund pending,refund_status
+i want to initiate return!,return_exchange
+"Hello, Is this product good? ASAP",product_information
+"hi, any updates on my order? now",order_status
+"Please, Money deducted but order failed please",payment_issues
+"Hey, Track my order thanks",order_status
+I want to What's the warranty on this?!,product_information
+I need to Where is my order? ASAP,order_status
+Is it possible to Please void my order right away,order_cancellation
+Air shipping thank you,shipping_inquiry
+"hey, free delivery threshold!",shipping_inquiry
+i need to shipment status please,order_status
+I need to Tell me about this product immediately,product_information
+I want to Delivery days urgently,shipping_inquiry
+i would like to thank you right away,general_inquiry
+would you expedited shipping.,shipping_inquiry
+can i account suspended right away,account_issues
+"Hello, Help with payment problem thanks",payment_issues
+i want to return label request!,return_exchange
+I would like to What colors does it come in?.,product_information
+can i this is fraud!,complaint
+"hello, my account is blocked urgently",account_issues
+I need to How can I contact you?,general_inquiry
+would you i want to return this right away,return_exchange
+"Hi, Is it too late to cancel? thanks",order_cancellation
+"hey, support request urgently",general_inquiry
+could you i'm not satisfied.,complaint
+"excuse me, track my order?",order_status
+How do I When will I get my refund? immediately,refund_status
+"hi, can't process my payment thank you",payment_issues
+I want to Where is my refund??,refund_status
+"Excuse me, 30 day return",return_exchange
+"hey, full refund please",refund_status
+"please, refund request status thank you",refund_status
+"hi, wrong item received?",complaint
+would you can't pay for my order.,payment_issues
+I want to Account security concern please,account_issues
+My payment was rejected,payment_issues
+how do i billing issue,payment_issues
+"Hello, Refund to credit card now",refund_status
+"Excuse me, When will I get my refund? immediately",refund_status
+I want to Contact information right away,general_inquiry
+"Excuse me, I want to return this right away",return_exchange
+Is it possible to Next day delivery right away,shipping_inquiry
+Could you Return process please,return_exchange
+how do i delivery status please?,order_status
+This is not what I ordered right away,complaint
+How do I General assistance please,general_inquiry
+"hey, when will my order arrive? thank you",order_status
+"hello, is it too late to cancel? thanks",order_cancellation
+how do i has my package been dispatched? thank you,order_status
+Is it possible to Payment problem right away,payment_issues
+"excuse me, brand information ASAP",product_information
+"Hi, Debit card declined.",payment_issues
+"excuse me, please process a cancellation",order_cancellation
+is it possible to cancellation request for my order.,order_cancellation
+I need to Do you have this in stock??,product_information
+can i how much is shipping?.,shipping_inquiry
+"hi, i need this order cancelled.",order_cancellation
+Double charged on my card immediately,payment_issues
+I need to Expedited shipping thank you,shipping_inquiry
+i want to shipment status.,order_status
+"hi, what's the warranty on this? now",product_information
+how do i delivery fee now,shipping_inquiry
+is it possible to return my order now,return_exchange
+"Please, Charged but no confirmation now",payment_issues
+Change shipping address?,shipping_inquiry
+i want to delivery days please,shipping_inquiry
+"Hi, Cancel my order immediately urgently",order_cancellation
+is it possible to i haven't received my refund.,refund_status
+i would like to new arrivals?,product_information
+"Could you I accidentally ordered, please cancel please",order_cancellation
+"excuse me, payment keeps failing?",payment_issues
+"excuse me, support request please",general_inquiry
+"Hello, Product reviews?",product_information
+"hello, payment issue with my account ASAP",payment_issues
+Has my order shipped? please,order_status
+"Please, First time customer urgently",general_inquiry
+i would like to can i swap this? now,return_exchange
+"please, email not recognized.",account_issues
+"excuse me, shipping options!",shipping_inquiry
+could you terrible customer service immediately,complaint
+"Excuse me, Business hours.",general_inquiry
+"Hi, Payment error right away",payment_issues
+is it possible to shipping methods!,shipping_inquiry
+"hey, is it too late to cancel??",order_cancellation
+"excuse me, return damaged product?",return_exchange
+i need to refund taking too long thank you,refund_status
+"Excuse me, Is my order on the way?.",order_status
+I want to Debit card declined!,payment_issues
+"please, i need customer service right away",general_inquiry
+I would like to Cancellation request for my order now,order_cancellation
+i would like to return process,return_exchange
+can i where is my delivery? now,order_status
+"hi, track my order ASAP",order_status
+i want to return request now,return_exchange
+"Hi, Ship to different address now",shipping_inquiry
+can i i need help,general_inquiry
+"Hello, Terrible customer service ASAP",complaint
+I need to Speak to representative,general_inquiry
+i need to money back please ASAP,refund_status
+is it possible to same day delivery thank you,shipping_inquiry
+Customer support?,general_inquiry
+I need to Compare products ASAP,product_information
+i need to verification code not received please,account_issues
+i need to return request.,return_exchange
+i would like to return my order now,return_exchange
+I feel cheated ASAP,complaint
+could you track my refund.,refund_status
+Account locked now,account_issues
+"hi, product malfunction immediately",complaint
+i want to shipping options.,shipping_inquiry
+could you refund timeline,refund_status
+could you quality issue return,return_exchange
+How do I Card declined now,payment_issues
+could you product recommendations right away,product_information
+"Hi, I want my order cancelled today urgently",order_cancellation
+Order tracking ASAP,order_status
+"hi, help me please",general_inquiry
+can i replace my item!,return_exchange
+I need to I need assistance thank you,general_inquiry
+Could you 30 day return!,return_exchange
+i need to the product is broken ASAP,complaint
+"Hey, Return label request now",return_exchange
+Is it possible to Account not working immediately,account_issues
+Could you Product recommendations thank you,product_information
+is it possible to expedite my refund ASAP,refund_status
+"excuse me, cancel my order immediately please",order_cancellation
+i need to can i return this product? thank you,return_exchange
+"excuse me, can't process my payment right away",payment_issues
+"hi, what's the status of my order? ASAP",order_status
+Is it possible to Product reviews now,product_information
+"excuse me, how do i return an item? thank you",return_exchange
+is it possible to replace my item right away,return_exchange
+Refund pending ASAP,refund_status
+"please, this is fraud right away",complaint
+"hello, any updates on my order? ASAP",order_status
+i need to initiate return?,return_exchange
+Please process a cancellation immediately,order_cancellation
+is it possible to refund to credit card!,refund_status
+I want to When will I get my refund? immediately,refund_status
+is it possible to can't access my account.,account_issues
+Delivery fee?,shipping_inquiry
+Is it possible to Help me please.,general_inquiry
+could you how do i return an item? thank you,return_exchange
+i want to please help me cancel my order now,order_cancellation
+could you hi there thank you,general_inquiry
+"Please, Refund timeline.",refund_status
+"excuse me, i have a question thanks",general_inquiry
+"hi, i accidentally ordered, please cancel right away",order_cancellation
+"hey, bad experience urgently",complaint
+I want to Account locked thanks,account_issues
+i would like to partial refund received!,refund_status
+"Hello, Free returns? now",return_exchange
+I need to Contact information ASAP,general_inquiry
+"please, exchange for different size!",return_exchange
+"Hello, False advertising please",complaint
+"Please, Shipping options",shipping_inquiry
+i need to do you have this in stock?.,product_information
+"Could you Wrong order, please cancel please",order_cancellation
+"excuse me, what's included in the package? immediately",product_information
+How do I Weekend delivery? urgently,shipping_inquiry
+can i did my order ship yet??,order_status
+"please, thank you thank you",general_inquiry
+I'm not satisfied thank you,complaint
+"Hey, Refund and return.",return_exchange
+"hi, can i swap this? now",return_exchange
+"excuse me, i'm waiting for my order urgently",order_status
+How do I When can I expect my delivery? please,order_status
+"hi, track my order.",order_status
+Could you How does this product work?,product_information
+"excuse me, payment problem now",payment_issues
+"Hey, Merge accounts.",account_issues
+can i account recovery now,account_issues
+i would like to check refund status ASAP,refund_status
+i would like to do you have this in stock? thank you,product_information
+"Hi, Account recovery now",account_issues
+can i track my refund.,refund_status
+"Excuse me, Brand information urgently",product_information
+"hello, how to return? thanks",return_exchange
+is it possible to help with payment problem right away,payment_issues
+Would you Please process a cancellation immediately,order_cancellation
+Expected delivery date?,order_status
+i want to hello immediately,general_inquiry
+i need to card not accepted thank you,payment_issues
+Can I Credit not received!,refund_status
+Would you What's the warranty on this? thank you,product_information
+Profile update,account_issues
+How do I Account security concern?,account_issues
+i want to cancel order thank you,order_cancellation
+i would like to this is not what i ordered thank you,complaint
+"hello, shipping methods urgently",shipping_inquiry
+"hey, when does my order arrive?!",order_status
+Would you When will I receive my order?.,order_status
+would you i want to file a complaint thank you,complaint
+"Hi, Help me please thanks",general_inquiry
+would you problem with checkout!,payment_issues
+"how do i item doesn't fit, return please",return_exchange
+Would you I'm very unhappy thank you,complaint
+i need to terrible customer service.,complaint
+i would like to is it too late to cancel? ASAP,order_cancellation
+"Hey, Material information",product_information
+could you please void my order now,order_cancellation
+is it possible to i'm very unhappy right away,complaint
+"excuse me, payment stuck thank you",payment_issues
+could you where is my refund? now,refund_status
+Change my phone number?,account_issues
+Could you Return pickup?,return_exchange
+"Please, Payment issue with my account ASAP",payment_issues
+Can I Product dimensions,product_information
+"Hi, Good afternoon?",general_inquiry
+I would like to Can't access my account ASAP,account_issues
+I want to Do you ship to my area? thanks,shipping_inquiry
+"Hi, My payment didn't go through!",payment_issues
+"hi, please cancel my recent order ASAP",order_cancellation
+could you is it too late to cancel? thank you,order_cancellation
+I need my money back thanks,refund_status
+Refund to credit card please,refund_status
+I need to Refund not received immediately,refund_status
+is it possible to what products do you have?!,product_information
+is it possible to when will i receive my order? please,order_status
+Can I How does this work? immediately,general_inquiry
+"please, reimburse me!",refund_status
+"hello, dissatisfied customer please",complaint
+"Excuse me, Delivery fee thank you",shipping_inquiry
+"Excuse me, Worst experience ever",complaint
+can i free delivery threshold!,shipping_inquiry
+i want to i need information thanks,general_inquiry
+How do I When will my order arrive?!,order_status
+"Hi, Do you ship to my area? ASAP",shipping_inquiry
+Product specifications immediately,product_information
+How do I Is this genuine product? please,product_information
+I need to 30 day return please,return_exchange
+"Hi, Update my email right away",account_issues
+"excuse me, exchange policy",return_exchange
+"please, brand information thanks",product_information
+would you i need this order cancelled.,order_cancellation
+i need to good afternoon urgently,general_inquiry
+"Hey, Weekend delivery?",shipping_inquiry
+i need to can i still cancel my order? thank you,order_cancellation
+"Hi, Is this product good? ASAP",product_information
+i would like to payment gateway error.,payment_issues
+Account hacked immediately,account_issues
+"hey, cancellation request for my order thank you",order_cancellation
+is it possible to i'm waiting for my order.,order_status
+is it possible to cancel my latest purchase.,order_cancellation
+"Please, I want to track my package thank you",order_status
+i need to change my phone number please,account_issues
+Is anyone there? ASAP,general_inquiry
+Could you Can someone help me?.,general_inquiry
+"hi, refund inquiry immediately",refund_status
+Cancel my order immediately,order_cancellation
+can i i'm waiting for my order!,order_status
+Can I I received a damaged item please,complaint
+"Hey, This is fraud thanks",complaint
+How do I How can I contact you? right away,general_inquiry
+Could you Delivery fee ASAP,shipping_inquiry
+how do i thank you.,general_inquiry
+How do I New here.,general_inquiry
+"excuse me, is it too late to cancel? thank you",order_cancellation
+i would like to payment problem,payment_issues
+"Hello, Account settings.",account_issues
+"excuse me, i need to know where my order is now",order_status
+"hi, payment stuck immediately",payment_issues
+Could you Update account information!,account_issues
+would you speak to representative right away,general_inquiry
+Product doesn't work thanks,complaint
+Is it possible to More info about the item now,product_information
+could you payment gateway error immediately,payment_issues
+"hello, has my package been dispatched? urgently",order_status
+"Hello, Don't ship my order, cancel it immediately",order_cancellation
+"excuse me, expected delivery date??",order_status
+Terrible customer service,complaint
+Card declined ASAP,payment_issues
+is it possible to general assistance please,general_inquiry
+i need to my payment didn't go through,payment_issues
+could you i'd like to cancel before it ships please,order_cancellation
