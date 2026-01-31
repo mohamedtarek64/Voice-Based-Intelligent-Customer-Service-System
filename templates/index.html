@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Voice-Based Intelligent Customer Service System - AI-powered voice assistant for customer support">
+    <title>🎤 Voice Customer Service | AI-Powered Support</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Color Palette */
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --secondary: #0ea5e9;
+            --accent: #f43f5e;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            
+            /* Neutrals */
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-hover: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #334155;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            --gradient-accent: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%);
+            --gradient-success: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+            
+            /* Spacing */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
+        }
+
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        /* Voice Recording */
+        .voice-section {
+            text-align: center;
+        }
+
+        .record-btn {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: none;
+            background: var(--gradient-primary);
+            color: white;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .record-btn:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .record-btn.recording {
+            background: var(--gradient-accent);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.4); }
+            50% { box-shadow: 0 0 0 20px rgba(244, 63, 94, 0); }
+        }
+
+        .record-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+        }
+
+        .record-btn:active::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        .record-status {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            min-height: 24px;
+        }
+
+        /* Text Input */
+        .input-group {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .text-input {
+            flex: 1;
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            font-family: inherit;
+            background: var(--bg-dark);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-lg);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .text-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        .text-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .btn {
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: inherit;
+            border: none;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Results Section */
+        .results-section {
+            margin-top: 2rem;
+        }
+
+        .result-card {
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .result-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-value {
+            font-size: 1.125rem;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Intent Badge */
+        .intent-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        /* Confidence Bar */
+        .confidence-bar {
+            margin-top: 1rem;
+        }
+
+        .confidence-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .confidence-track {
+            height: 8px;
+            background: var(--bg-dark);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+        }
+
+        .confidence-fill {
+            height: 100%;
+            border-radius: var(--radius-full);
+            transition: width 0.5s ease;
+        }
+
+        .confidence-high {
+            background: var(--gradient-success);
+        }
+
+        .confidence-medium {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+        }
+
+        .confidence-low {
+            background: var(--gradient-accent);
+        }
+
+        /* Response Box */
+        .response-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1px solid var(--primary);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+        }
+
+        .response-text {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+        }
+
+        .response-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        /* Top Intents */
+        .top-intents {
+            margin-top: 1.5rem;
+        }
+
+        .intent-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background: var(--bg-dark);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.5rem;
+        }
+
+        .intent-name {
+            font-weight: 500;
+        }
+
+        .intent-score {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* Status Indicators */
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .status-online {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+
+        .status-offline {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--error);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: currentColor;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        /* Info Section */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .info-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        /* Hidden */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Waveform Animation */
+        .waveform {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            height: 40px;
+        }
+
+        .waveform-bar {
+            width: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+            animation: wave 0.8s ease-in-out infinite;
+        }
+
+        .waveform-bar:nth-child(1) { animation-delay: 0s; height: 20px; }
+        .waveform-bar:nth-child(2) { animation-delay: 0.1s; height: 30px; }
+        .waveform-bar:nth-child(3) { animation-delay: 0.2s; height: 40px; }
+        .waveform-bar:nth-child(4) { animation-delay: 0.3s; height: 30px; }
+        .waveform-bar:nth-child(5) { animation-delay: 0.4s; height: 20px; }
+
+        @keyframes wave {
+            0%, 100% { transform: scaleY(0.5); }
+            50% { transform: scaleY(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    <div class="bg-grid"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">🎤</div>
+            <h1>Voice Customer Service</h1>
+            <p class="subtitle">AI-Powered Intelligent Support System</p>
+            <div style="margin-top: 1rem;">
+                <span id="systemStatus" class="status-indicator status-offline">
+                    <span class="status-dot"></span>
+                    Checking...
+                </span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-grid">
+            <!-- Voice Input Card -->
+            <div class="card voice-section">
+                <div class="card-header">
+                    <div class="card-icon">🎙️</div>
+                    <h2 class="card-title">Voice Input</h2>
+                </div>
+                
+                <button id="recordBtn" class="record-btn" title="Click to record">
+                    🎤
+                </button>
+                <p id="recordStatus" class="record-status">Click to start recording</p>
+                
+                <div id="waveform" class="waveform hidden">
+                    <div class="waveform-bar"></div>
+                    <div class="waveform-bar"></div>
+                    <div class="waveform-bar"></div>
+                    <div class="waveform-bar"></div>
+                    <div class="waveform-bar"></div>
+                </div>
+            </div>
+
+            <!-- Text Input Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">⌨️</div>
+                    <h2 class="card-title">Text Input</h2>
+                </div>
+                
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="textInput" 
+                        class="text-input" 
+                        placeholder="Type your question here..."
+                        autocomplete="off"
+                    >
+                    <button id="sendBtn" class="btn btn-primary">
+                        <span>Send</span>
+                        <span>→</span>
+                    </button>
+                </div>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <button class="btn btn-secondary quick-query" data-query="I want to cancel my order">Cancel Order</button>
+                    <button class="btn btn-secondary quick-query" data-query="Where is my package?">Track Order</button>
+                    <button class="btn btn-secondary quick-query" data-query="I need a refund">Refund</button>
+                    <button class="btn btn-secondary quick-query" data-query="I have a complaint">Complaint</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="results-section hidden">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🤖</div>
+                    <h2 class="card-title">AI Response</h2>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loadingState" class="hidden" style="text-align: center; padding: 2rem;">
+                    <div class="spinner"></div>
+                    <p style="margin-top: 1rem; color: var(--text-secondary);">Analyzing your query...</p>
+                </div>
+
+                <!-- Results Content -->
+                <div id="resultsContent">
+                    <!-- Transcription (if voice) -->
+                    <div id="transcriptionBox" class="result-card hidden">
+                        <div class="result-label">🎤 Your Query</div>
+                        <div id="transcriptionText" class="result-value"></div>
+                    </div>
+
+                    <!-- Intent & Confidence -->
+                    <div class="result-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                            <div>
+                                <div class="result-label">🎯 Detected Intent</div>
+                                <span id="intentBadge" class="intent-badge">order_status</span>
+                            </div>
+                            <div id="actionBadge" class="status-indicator status-online">
+                                Auto Responding
+                            </div>
+                        </div>
+                        
+                        <div class="confidence-bar">
+                            <div class="confidence-label">
+                                <span>Confidence</span>
+                                <span id="confidenceValue">92%</span>
+                            </div>
+                            <div class="confidence-track">
+                                <div id="confidenceFill" class="confidence-fill confidence-high" style="width: 92%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Response -->
+                    <div class="response-box">
+                        <div class="result-label">💬 Response</div>
+                        <p id="responseText" class="response-text">
+                            Your order is on its way! It should arrive within 3-5 business days.
+                        </p>
+                        <div class="response-actions">
+                            <button id="speakBtn" class="btn btn-secondary">
+                                🔊 Listen
+                            </button>
+                            <button id="copyBtn" class="btn btn-secondary">
+                                📋 Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Top Intents -->
+                    <div class="top-intents">
+                        <div class="result-label">📊 Top Predictions</div>
+                        <div id="topIntentsList">
+                            <!-- Filled by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-icon">🧠</div>
+                <div class="info-title">ML-Powered</div>
+                <div class="info-desc">Intent classification using TF-IDF & Logistic Regression</div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🎤</div>
+                <div class="info-title">Voice Input</div>
+                <div class="info-desc">Speech-to-Text using OpenAI Whisper</div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🔊</div>
+                <div class="info-title">Voice Output</div>
+                <div class="info-desc">Text-to-Speech for natural responses</div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">⚡</div>
+                <div class="info-title">Real-Time</div>
+                <div class="info-desc">Fast processing with confidence scoring</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>🎓 Graduation Project - Voice-Based Intelligent Customer Service System</p>
+            <p style="margin-top: 0.5rem;">
+                Powered by Machine Learning &amp; Natural Language Processing
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // DOM Elements
+        const recordBtn = document.getElementById('recordBtn');
+        const recordStatus = document.getElementById('recordStatus');
+        const waveform = document.getElementById('waveform');
+        const textInput = document.getElementById('textInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const resultsSection = document.getElementById('resultsSection');
+        const loadingState = document.getElementById('loadingState');
+        const resultsContent = document.getElementById('resultsContent');
+        const transcriptionBox = document.getElementById('transcriptionBox');
+        const transcriptionText = document.getElementById('transcriptionText');
+        const intentBadge = document.getElementById('intentBadge');
+        const actionBadge = document.getElementById('actionBadge');
+        const confidenceValue = document.getElementById('confidenceValue');
+        const confidenceFill = document.getElementById('confidenceFill');
+        const responseText = document.getElementById('responseText');
+        const topIntentsList = document.getElementById('topIntentsList');
+        const speakBtn = document.getElementById('speakBtn');
+        const copyBtn = document.getElementById('copyBtn');
+        const systemStatus = document.getElementById('systemStatus');
+
+        // State
+        let isRecording = false;
+        let mediaRecorder = null;
+        let audioChunks = [];
+        let currentResponse = '';
+
+        // Check system status
+        async function checkStatus() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+                
+                if (data.model_loaded) {
+                    systemStatus.className = 'status-indicator status-online';
+                    systemStatus.innerHTML = '<span class="status-dot"></span>System Online';
+                } else {
+                    systemStatus.className = 'status-indicator status-offline';
+                    systemStatus.innerHTML = '<span class="status-dot"></span>Model Not Loaded';
+                }
+            } catch (error) {
+                systemStatus.className = 'status-indicator status-offline';
+                systemStatus.innerHTML = '<span class="status-dot"></span>Offline';
+            }
+        }
+
+        // Initialize
+        checkStatus();
+
+        // Process text query
+        async function processText(query) {
+            resultsSection.classList.remove('hidden');
+            loadingState.classList.remove('hidden');
+            resultsContent.classList.add('hidden');
+            transcriptionBox.classList.add('hidden');
+
+            try {
+                const response = await fetch('/api/process_text', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query })
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    displayResults(data, query);
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+            } finally {
+                loadingState.classList.add('hidden');
+                resultsContent.classList.remove('hidden');
+            }
+        }
+
+        // Display results
+        function displayResults(data, query) {
+            // Show transcription if different from query
+            if (data.transcription && data.transcription !== query) {
+                transcriptionBox.classList.remove('hidden');
+                transcriptionText.textContent = data.transcription;
+            } else if (query) {
+                transcriptionBox.classList.remove('hidden');
+                transcriptionText.textContent = query;
+            }
+
+            // Intent
+            intentBadge.textContent = formatIntent(data.intent);
+
+            // Action badge
+            const actions = {
+                'auto_respond': { text: '✅ Auto Responding', class: 'status-online' },
+                'clarify': { text: '❓ Needs Clarification', class: 'status-indicator' },
+                'escalate': { text: '👤 Escalating', class: 'status-offline' }
+            };
+            const action = actions[data.action] || actions['auto_respond'];
+            actionBadge.textContent = action.text;
+            actionBadge.className = 'status-indicator ' + action.class;
+
+            // Confidence
+            const confidence = Math.round(data.confidence * 100);
+            confidenceValue.textContent = confidence + '%';
+            confidenceFill.style.width = confidence + '%';
+            
+            if (confidence >= 85) {
+                confidenceFill.className = 'confidence-fill confidence-high';
+            } else if (confidence >= 60) {
+                confidenceFill.className = 'confidence-fill confidence-medium';
+            } else {
+                confidenceFill.className = 'confidence-fill confidence-low';
+            }
+
+            // Response
+            currentResponse = data.response;
+            responseText.textContent = data.response;
+
+            // Top intents
+            topIntentsList.innerHTML = '';
+            if (data.top_intents) {
+                data.top_intents.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'intent-item';
+                    div.innerHTML = `
+                        <span class="intent-name">${formatIntent(item.intent)}</span>
+                        <span class="intent-score">${(item.confidence * 100).toFixed(1)}%</span>
+                    `;
+                    topIntentsList.appendChild(div);
+                });
+            }
+        }
+
+        // Format intent name
+        function formatIntent(intent) {
+            return intent.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        }
+
+        // Send button click
+        sendBtn.addEventListener('click', () => {
+            const query = textInput.value.trim();
+            if (query) {
+                processText(query);
+            }
+        });
+
+        // Enter key
+        textInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const query = textInput.value.trim();
+                if (query) {
+                    processText(query);
+                }
+            }
+        });
+
+        // Quick query buttons
+        document.querySelectorAll('.quick-query').forEach(btn => {
+            btn.addEventListener('click', () => {
+                textInput.value = btn.dataset.query;
+                processText(btn.dataset.query);
+            });
+        });
+
+        // Voice recording
+        recordBtn.addEventListener('click', async () => {
+            if (!isRecording) {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    mediaRecorder = new MediaRecorder(stream);
+                    audioChunks = [];
+
+                    mediaRecorder.ondataavailable = (e) => {
+                        audioChunks.push(e.data);
+                    };
+
+                    mediaRecorder.onstop = async () => {
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                        await sendAudio(audioBlob);
+                    };
+
+                    mediaRecorder.start();
+                    isRecording = true;
+                    recordBtn.classList.add('recording');
+                    recordBtn.textContent = '⏹️';
+                    recordStatus.textContent = 'Recording... Click to stop';
+                    waveform.classList.remove('hidden');
+                } catch (error) {
+                    alert('Microphone access denied or not available');
+                }
+            } else {
+                mediaRecorder.stop();
+                mediaRecorder.stream.getTracks().forEach(track => track.stop());
+                isRecording = false;
+                recordBtn.classList.remove('recording');
+                recordBtn.textContent = '🎤';
+                recordStatus.textContent = 'Processing...';
+                waveform.classList.add('hidden');
+            }
+        });
+
+        // Send audio to server
+        async function sendAudio(audioBlob) {
+            resultsSection.classList.remove('hidden');
+            loadingState.classList.remove('hidden');
+            resultsContent.classList.add('hidden');
+
+            const formData = new FormData();
+            formData.append('audio', audioBlob, 'recording.wav');
+
+            try {
+                const response = await fetch('/api/process_audio', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    displayResults(data);
+                    recordStatus.textContent = 'Click to start recording';
+                } else {
+                    alert('Error: ' + data.error);
+                    recordStatus.textContent = 'Error. Try again.';
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+                recordStatus.textContent = 'Error. Try again.';
+            } finally {
+                loadingState.classList.add('hidden');
+                resultsContent.classList.remove('hidden');
+            }
+        }
+
+        // Speak button
+        speakBtn.addEventListener('click', async () => {
+            if (!currentResponse) return;
+
+            try {
+                const response = await fetch('/api/speak', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: currentResponse })
+                });
+
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const audio = new Audio(URL.createObjectURL(blob));
+                    audio.play();
+                }
+            } catch (error) {
+                console.error('TTS error:', error);
+            }
+        });
+
+        // Copy button
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(currentResponse).then(() => {
+                copyBtn.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    copyBtn.textContent = '📋 Copy';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
