@@ -35,5 +35,8 @@ soundfile>=0.12.1
 python-dotenv>=1.0.0
 tqdm>=4.65.0
 
+# Generative AI
+google-generativeai>=0.3.0
+
 # Testing
 pytest>=7.4.0

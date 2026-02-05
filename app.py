@@ -17,6 +17,11 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src
 from src.data_preprocessing import preprocess_text, download_nltk_data
 from src.decision_engine import DecisionEngine
 from src.text_to_speech import TextToSpeech
+from src.llm_engine import LLMEngine
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 import joblib
 
@@ -38,6 +43,7 @@ vectorizer = None
 stt = None
 tts = None
 decision_engine = None
+llm_engine = None
 
 
 def allowed_file(filename):
@@ -72,6 +78,10 @@ def load_models():
     # Download NLTK data
     download_nltk_data()
     
+    # Initialize LLM Engine
+    llm_engine = LLMEngine()
+    print("✓ LLM Engine initialized")
+    
     # Try to initialize STT (optional - might not work on all systems)
     try:
         from src.speech_to_text import create_stt
@@ -96,6 +106,7 @@ def status():
         'model_loaded': model is not None,
         'stt_available': stt is not None,
         'tts_available': tts is not None,
+        'llm_available': llm_engine.is_available() if llm_engine else False,
         'intents': list(model.classes_) if model else []
     })
 
@@ -142,9 +153,27 @@ def process_text():
         }
         
         # Generate response
-        result = decision_engine.process_query(prediction, query)
-        result['success'] = True
+        # If it's a general intent or low confidence, use LLM
+        service_intents = ['order_cancellation', 'order_status', 'payment_issues', 'return_exchange', 'refund_status', 'shipping_inquiry']
         
+        if predicted_intent not in service_intents or max_confidence < 0.7:
+            if llm_engine.is_available():
+                print(f"Using LLM for query: {query}")
+                llm_response = llm_engine.generate_response(query)
+                result = {
+                    'original_query': query,
+                    'intent': predicted_intent,
+                    'confidence': max_confidence,
+                    'action': 'llm_respond',
+                    'response': llm_response,
+                    'top_intents': top_intents
+                }
+            else:
+                result = decision_engine.process_query(prediction, query)
+        else:
+            result = decision_engine.process_query(prediction, query)
+            
+        result['success'] = True
         return jsonify(result)
         
     except Exception as e:
@@ -223,7 +252,25 @@ def process_audio():
         }
         
         # Generate response
-        result = decision_engine.process_query(prediction, query)
+        service_intents = ['order_cancellation', 'order_status', 'payment_issues', 'return_exchange', 'refund_status', 'shipping_inquiry']
+        
+        if predicted_intent not in service_intents or max_confidence < 0.7:
+            if llm_engine.is_available():
+                print(f"Using LLM for query: {query}")
+                llm_response = llm_engine.generate_response(query)
+                result = {
+                    'original_query': query,
+                    'intent': predicted_intent,
+                    'confidence': max_confidence,
+                    'action': 'llm_respond',
+                    'response': llm_response,
+                    'top_intents': top_intents
+                }
+            else:
+                result = decision_engine.process_query(prediction, query)
+        else:
+            result = decision_engine.process_query(prediction, query)
+            
         result['success'] = True
         result['transcription'] = query
         
@@ -252,10 +299,18 @@ def speak():
         }), 400
     
     try:
+        # Detect language for TTS
+        # Simple check for Arabic characters
+        lang = 'en'
+        if any(u'\u0600' <= c <= u'\u06FF' for c in text):
+            lang = 'ar'
+            
         filename = f"response_{uuid.uuid4()}.mp3"
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         
-        tts.speak(text, output_file=filepath, play_audio=False)
+        # Create a temporary TTS instance for the specific language if needed
+        temp_tts = TextToSpeech(language=lang)
+        temp_tts.speak(text, output_file=filepath, play_audio=False)
         
         return send_file(filepath, mimetype='audio/mpeg')
         

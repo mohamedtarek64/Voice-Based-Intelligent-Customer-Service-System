@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Voice-Based Intelligent Customer Service System - AI-powered voice assistant for customer support">
-    <title>🎤 Voice Customer Service | AI-Powered Support</title>
-    
+    <meta name="description"
+        content="Voice-Based Intelligent Customer Service System - AI-powered voice assistant for customer support">
+    <title>🤖 Intelligent AI Chatbot | Voice Assistant</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             /* Color Palette */
@@ -22,7 +25,7 @@
             --success: #10b981;
             --warning: #f59e0b;
             --error: #ef4444;
-            
+
             /* Neutrals */
             --bg-dark: #0f172a;
             --bg-card: #1e293b;
@@ -31,20 +34,20 @@
             --text-secondary: #94a3b8;
             --text-muted: #64748b;
             --border: #334155;
-            
+
             /* Gradients */
             --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
             --gradient-accent: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%);
             --gradient-success: linear-gradient(135deg, #10b981 0%, #34d399 100%);
-            --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-            
+            --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+
             /* Shadows */
             --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
             --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
             --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
-            
+
             /* Spacing */
             --radius-sm: 8px;
             --radius-md: 12px;
@@ -75,7 +78,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
@@ -88,9 +91,9 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
             background-size: 60px 60px;
         }
 
@@ -115,8 +118,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         h1 {
@@ -217,8 +227,15 @@
         }
 
         @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.4); }
-            50% { box-shadow: 0 0 0 20px rgba(244, 63, 94, 0); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 0 20px rgba(244, 63, 94, 0);
+            }
         }
 
         .record-btn::after {
@@ -228,7 +245,7 @@
             left: 50%;
             width: 0;
             height: 0;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             transform: translate(-50%, -50%);
             transition: width 0.3s, height 0.3s;
@@ -465,8 +482,15 @@
         }
 
         @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
         }
 
         /* Info Section */
@@ -512,7 +536,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Footer */
@@ -550,32 +576,121 @@
             animation: wave 0.8s ease-in-out infinite;
         }
 
-        .waveform-bar:nth-child(1) { animation-delay: 0s; height: 20px; }
-        .waveform-bar:nth-child(2) { animation-delay: 0.1s; height: 30px; }
-        .waveform-bar:nth-child(3) { animation-delay: 0.2s; height: 40px; }
-        .waveform-bar:nth-child(4) { animation-delay: 0.3s; height: 30px; }
-        .waveform-bar:nth-child(5) { animation-delay: 0.4s; height: 20px; }
+        .waveform-bar:nth-child(1) {
+            animation-delay: 0s;
+            height: 20px;
+        }
+
+        .waveform-bar:nth-child(2) {
+            animation-delay: 0.1s;
+            height: 30px;
+        }
+
+        .waveform-bar:nth-child(3) {
+            animation-delay: 0.2s;
+            height: 40px;
+        }
+
+        .waveform-bar:nth-child(4) {
+            animation-delay: 0.3s;
+            height: 30px;
+        }
+
+        .waveform-bar:nth-child(5) {
+            animation-delay: 0.4s;
+            height: 20px;
+        }
 
         @keyframes wave {
-            0%, 100% { transform: scaleY(0.5); }
-            50% { transform: scaleY(1); }
+
+            0%,
+            100% {
+                transform: scaleY(0.5);
+            }
+
+            50% {
+                transform: scaleY(1);
+            }
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 0.5rem;
+            background: var(--bg-card);
+            padding: 0.5rem;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border);
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        /* RTL Support */
+        body.rtl {
+            direction: rtl;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body.rtl .logo {
+            animation: float-rtl 3s ease-in-out infinite;
+        }
+
+        @keyframes float-rtl {
+
+            0%,
+            100% {
+                transform: translateY(0) scaleX(-1);
+            }
+
+            50% {
+                transform: translateY(-10px) scaleX(-1);
+            }
+        }
+
+        body.rtl .btn span:last-child {
+            transform: scaleX(-1);
         }
     </style>
 </head>
+
 <body>
     <div class="bg-pattern"></div>
     <div class="bg-grid"></div>
 
     <div class="container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn" onclick="setLanguage('ar')">AR</button>
+        </div>
+
         <!-- Header -->
         <header>
-            <div class="logo">🎤</div>
-            <h1>Voice Customer Service</h1>
-            <p class="subtitle">AI-Powered Intelligent Support System</p>
+            <div class="logo">🤖</div>
+            <h1 id="mainTitle">Intelligent AI Chatbot</h1>
+            <p class="subtitle" id="mainSubtitle">Your General AI Voice Assistant - Ask Me Anything!</p>
             <div style="margin-top: 1rem;">
                 <span id="systemStatus" class="status-indicator status-offline">
                     <span class="status-dot"></span>
-                    Checking...
+                    <span id="statusText">Checking...</span>
                 </span>
             </div>
         </header>
@@ -588,12 +703,12 @@
                     <div class="card-icon">🎙️</div>
                     <h2 class="card-title">Voice Input</h2>
                 </div>
-                
+
                 <button id="recordBtn" class="record-btn" title="Click to record">
                     🎤
                 </button>
                 <p id="recordStatus" class="record-status">Click to start recording</p>
-                
+
                 <div id="waveform" class="waveform hidden">
                     <div class="waveform-bar"></div>
                     <div class="waveform-bar"></div>
@@ -609,26 +724,22 @@
                     <div class="card-icon">⌨️</div>
                     <h2 class="card-title">Text Input</h2>
                 </div>
-                
+
                 <div class="input-group">
-                    <input 
-                        type="text" 
-                        id="textInput" 
-                        class="text-input" 
-                        placeholder="Type your question here..."
-                        autocomplete="off"
-                    >
+                    <input type="text" id="textInput" class="text-input" placeholder="Type your question here..."
+                        autocomplete="off">
                     <button id="sendBtn" class="btn btn-primary">
                         <span>Send</span>
                         <span>→</span>
                     </button>
                 </div>
-                
-                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                    <button class="btn btn-secondary quick-query" data-query="I want to cancel my order">Cancel Order</button>
-                    <button class="btn btn-secondary quick-query" data-query="Where is my package?">Track Order</button>
-                    <button class="btn btn-secondary quick-query" data-query="I need a refund">Refund</button>
-                    <button class="btn btn-secondary quick-query" data-query="I have a complaint">Complaint</button>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;" id="quickQueries">
+                    <button class="btn btn-secondary quick-query" data-query="Who are you?">Who are you?</button>
+                    <button class="btn btn-secondary quick-query" data-query="Tell me a joke">Tell me a joke</button>
+                    <button class="btn btn-secondary quick-query" data-query="What can you do?">What can you
+                        do?</button>
+                    <button class="btn btn-secondary quick-query" data-query="How's the weather?">Weather</button>
                 </div>
             </div>
         </div>
@@ -657,7 +768,8 @@
 
                     <!-- Intent & Confidence -->
                     <div class="result-card">
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                             <div>
                                 <div class="result-label">🎯 Detected Intent</div>
                                 <span id="intentBadge" class="intent-badge">order_status</span>
@@ -666,14 +778,15 @@
                                 Auto Responding
                             </div>
                         </div>
-                        
+
                         <div class="confidence-bar">
                             <div class="confidence-label">
                                 <span>Confidence</span>
                                 <span id="confidenceValue">92%</span>
                             </div>
                             <div class="confidence-track">
-                                <div id="confidenceFill" class="confidence-fill confidence-high" style="width: 92%;"></div>
+                                <div id="confidenceFill" class="confidence-fill confidence-high" style="width: 92%;">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -731,9 +844,9 @@
 
         <!-- Footer -->
         <footer>
-            <p>🎓 Graduation Project - Voice-Based Intelligent Customer Service System</p>
-            <p style="margin-top: 0.5rem;">
-                Powered by Machine Learning &amp; Natural Language Processing
+            <p id="footerProject">🤖 Intelligent AI Voice Chatbot & Assistant</p>
+            <p style="margin-top: 0.5rem;" id="footerPowered">
+                Powered by Advanced Machine Learning & LLM Technology
             </p>
         </footer>
     </div>
@@ -765,23 +878,146 @@
         let mediaRecorder = null;
         let audioChunks = [];
         let currentResponse = '';
+        let currentLang = 'en';
+
+        const TRANSLATIONS = {
+            en: {
+                title: 'Intelligent AI Chatbot',
+                subtitle: 'Your General AI Voice Assistant - Ask Me Anything!',
+                checking: 'Checking...',
+                online: 'System Online',
+                offline: 'Offline',
+                modelNotLoaded: 'Model Not Loaded',
+                voiceIn: 'Voice Input',
+                textIn: 'Text Input',
+                recordIdle: 'Click to start recording',
+                recording: 'Recording... Click to stop',
+                processing: 'Processing...',
+                placeholder: 'Type your question here...',
+                send: 'Send',
+                aiResponse: 'AI Response',
+                query: 'Your Query',
+                detectedIntent: 'Detected Intent',
+                confidence: 'Confidence',
+                response: 'Response',
+                listen: 'Listen',
+                copy: 'Copy',
+                copied: 'Copied!',
+                analyzing: 'Analyzing your query...',
+                predictions: 'Top Predictions',
+                footerProject: '🤖 Intelligent AI Voice Chatbot & Assistant',
+                footerPowered: 'Powered by Advanced Machine Learning & LLM Technology',
+                quick: {
+                    who: 'Who are you?',
+                    joke: 'Tell me a joke',
+                    do: 'What can you do?',
+                    weather: 'Weather'
+                }
+            },
+            ar: {
+                title: 'شات بوت الذكاء الاصطناعي',
+                subtitle: 'مساعدك الشخصي الذكي - اسألني أي شيء!',
+                checking: 'جاري التحقق...',
+                online: 'النظام متصل',
+                offline: 'غير متصل',
+                modelNotLoaded: 'الموديل غير محمل',
+                voiceIn: 'إدخال صوتي',
+                textIn: 'إدخال نصي',
+                recordIdle: 'اضغط لبدء التسجيل',
+                recording: 'جاري التسجيل... اضغط للتوقف',
+                processing: 'جاري المعالجة...',
+                placeholder: 'اكتب سؤالك هنا...',
+                send: 'إرسال',
+                aiResponse: 'رد الذكاء الاصطناعي',
+                query: 'سؤالك',
+                detectedIntent: 'النية المكتشفة',
+                confidence: 'درجة الثقة',
+                response: 'الرد',
+                listen: 'استماع',
+                copy: 'نسخ',
+                copied: 'تم النسخ!',
+                analyzing: 'جاري تحليل سؤالك...',
+                predictions: 'التوقعات الأعلى',
+                footerProject: '🤖 شات بوت ومساعد صوتي ذكي',
+                footerPowered: 'يعمل بتقنيات تعلم الآلة المتقدمة و LLM',
+                quick: {
+                    who: 'من أنت؟',
+                    joke: 'قل لي نكتة',
+                    do: 'ماذا تستطيع أن تفعل؟',
+                    weather: 'الطقس'
+                }
+            }
+        };
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            const t = TRANSLATIONS[lang];
+
+            // Update UI
+            document.body.className = lang === 'ar' ? 'rtl' : '';
+            document.getElementById('mainTitle').textContent = t.title;
+            document.getElementById('mainSubtitle').textContent = t.subtitle;
+            document.querySelector('.voice-section .card-title').textContent = t.voiceIn;
+            document.querySelector('.card:nth-child(2) .card-title').textContent = t.textIn;
+            textInput.placeholder = t.placeholder;
+            sendBtn.querySelector('span:first-child').textContent = t.send;
+            document.querySelector('#resultsSection .card-title').textContent = t.aiResponse;
+            document.querySelector('#transcriptionBox .result-label').textContent = '🎤 ' + t.query;
+            document.querySelector('.result-card:nth-child(2) .result-label').textContent = '🎯 ' + t.detectedIntent;
+            document.querySelector('.confidence-label span:first-child').textContent = t.confidence;
+            document.querySelector('.response-box .result-label').textContent = '💬 ' + t.response;
+            speakBtn.textContent = '🔊 ' + t.listen;
+            copyBtn.textContent = '📋 ' + t.copy;
+            document.querySelector('#loadingState p').textContent = t.analyzing;
+            document.querySelector('.top-intents .result-label').textContent = '📊 ' + t.predictions;
+            document.getElementById('footerProject').textContent = t.footerProject;
+            document.getElementById('footerPowered').textContent = t.footerPowered;
+
+            if (!isRecording) recordStatus.textContent = t.recordIdle;
+
+            // Update quick queries
+            const quickQueries = document.getElementById('quickQueries');
+            quickQueries.innerHTML = `
+                <button class="btn btn-secondary quick-query" data-query="${t.quick.who}">${t.quick.who}</button>
+                <button class="btn btn-secondary quick-query" data-query="${t.quick.joke}">${t.quick.joke}</button>
+                <button class="btn btn-secondary quick-query" data-query="${t.quick.do}">${t.quick.do}</button>
+                <button class="btn btn-secondary quick-query" data-query="${t.quick.weather}">${t.quick.weather}</button>
+            `;
+
+            // Re-attach listeners to new buttons
+            document.querySelectorAll('.quick-query').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    textInput.value = btn.dataset.query;
+                    processText(btn.dataset.query);
+                });
+            });
+
+            // Update toggle buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+            });
+
+            checkStatus();
+        }
 
         // Check system status
         async function checkStatus() {
             try {
                 const response = await fetch('/api/status');
                 const data = await response.json();
-                
+                const t = TRANSLATIONS[currentLang];
+
                 if (data.model_loaded) {
                     systemStatus.className = 'status-indicator status-online';
-                    systemStatus.innerHTML = '<span class="status-dot"></span>System Online';
+                    systemStatus.innerHTML = `<span class="status-dot"></span>${t.online}`;
                 } else {
                     systemStatus.className = 'status-indicator status-offline';
-                    systemStatus.innerHTML = '<span class="status-dot"></span>Model Not Loaded';
+                    systemStatus.innerHTML = `<span class="status-dot"></span>${t.modelNotLoaded}`;
                 }
             } catch (error) {
+                const t = TRANSLATIONS[currentLang];
                 systemStatus.className = 'status-indicator status-offline';
-                systemStatus.innerHTML = '<span class="status-dot"></span>Offline';
+                systemStatus.innerHTML = `<span class="status-dot"></span>${t.offline}`;
             }
         }
 
@@ -803,7 +1039,7 @@
                 });
 
                 const data = await response.json();
-                
+
                 if (data.success) {
                     displayResults(data, query);
                 } else {
@@ -845,7 +1081,7 @@
             const confidence = Math.round(data.confidence * 100);
             confidenceValue.textContent = confidence + '%';
             confidenceFill.style.width = confidence + '%';
-            
+
             if (confidence >= 85) {
                 confidenceFill.className = 'confidence-fill confidence-high';
             } else if (confidence >= 60) {
@@ -925,7 +1161,7 @@
                     isRecording = true;
                     recordBtn.classList.add('recording');
                     recordBtn.textContent = '⏹️';
-                    recordStatus.textContent = 'Recording... Click to stop';
+                    recordStatus.textContent = TRANSLATIONS[currentLang].recording;
                     waveform.classList.remove('hidden');
                 } catch (error) {
                     alert('Microphone access denied or not available');
@@ -957,10 +1193,10 @@
                 });
 
                 const data = await response.json();
-                
+
                 if (data.success) {
                     displayResults(data);
-                    recordStatus.textContent = 'Click to start recording';
+                    recordStatus.textContent = TRANSLATIONS[currentLang].recordIdle;
                 } else {
                     alert('Error: ' + data.error);
                     recordStatus.textContent = 'Error. Try again.';
@@ -998,12 +1234,14 @@
         // Copy button
         copyBtn.addEventListener('click', () => {
             navigator.clipboard.writeText(currentResponse).then(() => {
-                copyBtn.textContent = '✓ Copied!';
+                const t = TRANSLATIONS[currentLang];
+                copyBtn.textContent = '✓ ' + t.copied;
                 setTimeout(() => {
-                    copyBtn.textContent = '📋 Copy';
+                    copyBtn.textContent = '📋 ' + t.copy;
                 }, 2000);
             });
         });
     </script>
 </body>
+
 </html>
