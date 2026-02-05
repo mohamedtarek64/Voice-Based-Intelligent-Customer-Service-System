@@ -78,6 +78,45 @@ RESPONSE_TEMPLATES = {
         "Your refund has been processed and should appear in your account shortly. If you don't see it within 10 business days, please contact us again.",
         "Let me look into your refund. I can see it was processed on our end. Please check with your bank if it hasn't arrived yet.",
         "Refund tracking is available! Your refund was initiated and is being processed by your payment provider."
+    ],
+    'greeting': [
+        "Hello! I'm your AI assistant. How can I help you today?",
+        "Hi there! How can I assist you?",
+        "Greetings! What can I do for you today?",
+        "Hello! It's nice to talk to you. How can I help?"
+    ],
+    'goodbye': [
+        "Goodbye! Have a great day!",
+        "Bye! Feel free to return if you have more questions.",
+        "See you later! Take care.",
+        "Goodbye! It was a pleasure assisting you."
+    ],
+    'thanks': [
+        "You're very welcome!",
+        "Happy to help!",
+        "Anytime! Let me know if you need anything else.",
+        "You're welcome! Glad I could assist."
+    ],
+    'bot_info': [
+        "I am an Intelligent AI Voice Assistant, designed to help you with various tasks and inquiries.",
+        "I'm a virtual assistant powered by Machine Learning. I can answer questions and help with customer service.",
+        "I'm your friendly neighborhood AI. You can call me your Digital Assistant."
+    ],
+    'capabilities': [
+        "I can help you with order status, cancellations, product info, and even general chat! Just ask.",
+        "I specialize in customer service but I can also chat about general topics, tell jokes, and more.",
+        "I can handle returns, payments, account issues, and answer general questions."
+    ],
+    'weather': [
+        "I don't have real-time access to your location, but it's always a good day to chat with an AI!",
+        "I can't check the sky from inside this computer, but I hope it's sunny where you are!",
+        "Weather is unpredictable! You might want to check a weather app for the most accurate info."
+    ],
+    'humor': [
+        "Why did the computer show up late to work? Because it had a hard drive!",
+        "Why do programmers prefer dark mode? Because light attracts bugs!",
+        "I told my computer I needed a break, and now it won't stop sending me KitKats.",
+        "Why was the cell phone wearing glasses? Because it lost its contacts!"
     ]
 }
 
@@ -92,7 +131,14 @@ CLARIFICATION_QUESTIONS = {
     'account_issues': "Are you having trouble accessing your account? What specific issue are you facing?",
     'general_inquiry': "I'd like to help! Could you please provide more details about your question?",
     'shipping_inquiry': "Do you have a question about shipping options or delivery times?",
-    'refund_status': "Are you checking on a pending refund? Please provide your order or refund reference number."
+    'refund_status': "Are you checking on a pending refund? Please provide your order or refund reference number.",
+    'greeting': "Would you like to start a conversation or do you have a specific request?",
+    'goodbye': "Are you finished with our conversation?",
+    'thanks': "Was I able to help you adequately?",
+    'bot_info': "Would you like to know more about my technology or my purpose?",
+    'capabilities': "Would you like a list of everything I can do?",
+    'weather': "Are you asking about the current weather?",
+    'humor': "Do you want to hear another joke?"
 }
 
 
