@@ -2,43 +2,73 @@
 import os
 import google.generativeai as genai
 from typing import Dict, Any
+from dotenv import load_dotenv
+import socket
+
+load_dotenv()
 
 class LLMEngine:
     """
-    LLM Engine using Google Gemini to handle general queries and any topic.
+    LLM Engine using the stable google-generativeai with network diagnostics.
     """
     
     def __init__(self, api_key: str = None):
-        """
-        Initialize the Gemini model.
-        """
         self.api_key = api_key or os.environ.get("GEMINI_API_KEY")
         self.model = None
         
+        # Network Diagnostic
+        print("🔍 Checking network connectivity...")
+        try:
+            # Try to resolve Google's DNS to see if Python can see the internet
+            socket.gethostbyname("generativelanguage.googleapis.com")
+            print("✅ DNS resolution successful")
+        except Exception as e:
+            print(f"❌ DNS resolution failed: {e}")
+            print("💡 Tip: Try to disable any VPN or Proxy, or check Firewall settings.")
+
         if self.api_key:
-            genai.configure(api_key=self.api_key)
-            # Use gemini-1.5-flash for speed and efficiency
-            self.model = genai.GenerativeModel('gemini-1.5-flash')
-            print("✓ Gemini LLM Engine initialized")
-        else:
-            print("⚠ Gemini API Key not found. Generative AI features will be disabled.")
+            try:
+                genai.configure(api_key=self.api_key)
+                # 'gemini-flash-latest' is the most stable name for the high-quota free tier
+                self.model_name = 'gemini-flash-latest'
+                self.model = genai.GenerativeModel(self.model_name)
+                print(f"✓ Gemini LLM Engine initialized with {self.model_name}")
+            except Exception as e:
+                print(f"❌ Init Error: {e}")
 
     def generate_response(self, query: str, context: str = "") -> str:
-        """
-        Generate a response for a general query.
-        """
         if not self.model:
-            return "I'm sorry, my Generative AI brain is not connected right now. Please provide an API key."
+            return "I'm sorry, my AI brain is not connected."
             
         try:
-            # System prompt to keep it concise and friendly
-            prompt = f"You are a friendly and helpful AI Voice Assistant. Respond concisely to the user's query.\nContext: {context}\nUser: {query}"
+            # We use a very simple prompt to save tokens (Quota preservation)
+            prompt = f"User: {query}\nAssistant: Respond concisely."
             
-            response = self.model.generate_content(prompt)
+            response = self.model.generate_content(
+                prompt,
+                safety_settings={
+                    'HATE': 'BLOCK_NONE',
+                    'HARASSMENT': 'BLOCK_NONE',
+                    'SEXUAL': 'BLOCK_NONE',
+                    'DANGEROUS': 'BLOCK_NONE'
+                }
+            )
             return response.text.strip()
+                
         except Exception as e:
-            print(f"LLM Error: {e}")
-            return "I encountered an error while thinking about that. Could you try asking again?"
+            print(f"❌ LLM Runtime Error with {self.model_name}: {e}")
+            # If 429 Quota or 404 Not Found, try the Pro version
+            if "429" in str(e) or "not found" in str(e).lower():
+                try:
+                    print("🔄 Quota full or Model not found. Trying fallback 'gemini-pro-latest'...")
+                    self.model_name = 'gemini-pro-latest'
+                    self.model = genai.GenerativeModel(self.model_name)
+                    # Simple prompt for fallback
+                    response = self.model.generate_content(query)
+                    return response.text.strip()
+                except Exception as e2:
+                    print(f"❌ Final Fallback Error: {e2}")
+            return "I'm sorry, I'm a bit overwhelmed right now. Please try again in 30 seconds."
 
     def is_available(self) -> bool:
         return self.model is not None

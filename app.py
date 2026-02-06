@@ -53,7 +53,7 @@ def allowed_file(filename):
 
 def load_models():
     """Load ML models and initialize components."""
-    global model, vectorizer, stt, tts, decision_engine
+    global model, vectorizer, stt, tts, decision_engine, llm_engine
     
     model_path = 'models/intent_classifier.pkl'
     vectorizer_path = 'models/vectorizer.pkl'
@@ -96,6 +96,12 @@ def load_models():
 def index():
     """Serve the main web interface."""
     return render_template('index.html')
+
+
+@app.route('/favicon.ico')
+def favicon():
+    """Handle favicon requests to avoid 404 errors."""
+    return '', 204
 
 
 @app.route('/api/status')
@@ -177,6 +183,9 @@ def process_text():
         return jsonify(result)
         
     except Exception as e:
+        print(f"❌ Server Error in process_text: {e}")
+        import traceback
+        traceback.print_exc()
         return jsonify({
             'success': False,
             'error': str(e)
@@ -280,6 +289,9 @@ def process_audio():
         return jsonify(result)
         
     except Exception as e:
+        print(f"❌ Server Error in process_audio: {e}")
+        import traceback
+        traceback.print_exc()
         return jsonify({
             'success': False,
             'error': str(e)
