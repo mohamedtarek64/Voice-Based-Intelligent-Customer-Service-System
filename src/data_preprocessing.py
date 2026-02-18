@@ -53,7 +53,7 @@ def clean_text(text: str) -> str:
     return text
 
 
-def preprocess_text(text: str, remove_stopwords: bool = False) -> str:
+def preprocess_text(text: str, remove_stopwords: bool = True) -> str:
     """
     Preprocess text for model input.
     
