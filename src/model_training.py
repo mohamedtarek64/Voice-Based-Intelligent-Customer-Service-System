@@ -14,6 +14,7 @@ from sklearn.svm import SVC
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV
+from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report, accuracy_score
 from typing import Tuple, Dict, Any, Optional
 
@@ -38,26 +39,29 @@ class IntentClassifier:
         self.intent_labels = None
         self.is_trained = False
         
-    def _get_model(self, model_type: str):
+    def _get_model(self, model_type: str, class_weight: Optional[Any] = None):
         """Get the appropriate model based on type."""
         models = {
             'logistic_regression': LogisticRegression(
                 max_iter=1000, 
-                C=1.0, 
+                C=1.0,
                 random_state=42,
-                solver='lbfgs'
+                solver='lbfgs',
+                class_weight=class_weight
             ),
             'svm': SVC(
                 kernel='linear', 
-                C=1.0, 
-                probability=True, 
-                random_state=42
+                C=1.0,
+                probability=True,
+                random_state=42,
+                class_weight=class_weight
             ),
             'naive_bayes': MultinomialNB(alpha=1.0),
             'random_forest': RandomForestClassifier(
                 n_estimators=100, 
                 random_state=42,
-                n_jobs=-1
+                n_jobs=-1,
+                class_weight=class_weight
             )
         }
         
@@ -67,7 +71,12 @@ class IntentClassifier:
         return models[model_type]
     
     def train(self, X_train: pd.Series, y_train: pd.Series, 
-              max_features: int = 10000, ngram_range: Tuple[int, int] = (1, 3)) -> Dict[str, Any]:
+              max_features: int = 10000, ngram_range: Tuple[int, int] = (1, 3),
+              tune_params: bool = False,
+              param_grid: Optional[Dict[str, Any]] = None,
+              cv: int = 5,
+              scoring: str = 'f1_weighted',
+              use_class_weight: bool = True) -> Dict[str, Any]:
         """
         Train the intent classifier.
         
@@ -87,37 +96,98 @@ class IntentClassifier:
         self.intent_labels = list(y_train.unique())
         print(f"Number of intents: {len(self.intent_labels)}")
         
-        # Create TF-IDF vectorizer
-        self.vectorizer = TfidfVectorizer(
-            max_features=max_features,
-            ngram_range=ngram_range,
-            min_df=2,
-            max_df=0.8,
-            sublinear_tf=True
-        )
-        
-        # Fit and transform training data
-        X_train_tfidf = self.vectorizer.fit_transform(X_train)
-        print(f"TF-IDF features: {X_train_tfidf.shape[1]}")
-        
-        # Initialize and train model
-        self.model = self._get_model(self.model_type)
-        self.model.fit(X_train_tfidf, y_train)
-        
-        # Calculate training accuracy
-        train_predictions = self.model.predict(X_train_tfidf)
-        train_accuracy = accuracy_score(y_train, train_predictions)
-        
-        # Cross-validation score
-        cv_scores = cross_val_score(self.model, X_train_tfidf, y_train, cv=5)
+        # Optionally use class weights to handle imbalance
+        class_weight = 'balanced' if use_class_weight else None
+
+        # If tuning is requested, build a pipeline and run GridSearchCV
+        if tune_params:
+            print("Running hyperparameter search with GridSearchCV...")
+            pipeline = Pipeline([
+                ('tfidf', TfidfVectorizer(min_df=2, max_df=0.8, sublinear_tf=True)),
+                ('clf', self._get_model(self.model_type, class_weight=class_weight))
+            ])
+
+            # Default parameter grid if none provided
+            if param_grid is None:
+                if self.model_type in ('logistic_regression', 'svm'):
+                    param_grid = {
+                        'tfidf__max_features': [2000, 5000, max_features],
+                        'tfidf__ngram_range': [(1,1), (1,2), ngram_range],
+                        'clf__C': [0.1, 1.0, 10.0]
+                    }
+                elif self.model_type == 'naive_bayes':
+                    param_grid = {
+                        'tfidf__max_features': [2000, 5000, max_features],
+                        'tfidf__ngram_range': [(1,1), (1,2), ngram_range],
+                        'clf__alpha': [0.5, 1.0, 1.5]
+                    }
+                else:  # random_forest
+                    param_grid = {
+                        'tfidf__max_features': [2000, 5000, max_features],
+                        'tfidf__ngram_range': [(1,1), (1,2), ngram_range],
+                        'clf__n_estimators': [100, 200]
+                    }
+
+            grid = GridSearchCV(
+                pipeline,
+                param_grid,
+                cv=cv,
+                scoring=scoring,
+                n_jobs=-1,
+                verbose=1
+            )
+
+            grid.fit(X_train, y_train)
+            best = grid.best_estimator_
+            print(f"Best params: {grid.best_params_}")
+
+            # Extract fitted vectorizer and classifier
+            self.vectorizer = best.named_steps['tfidf']
+            self.model = best.named_steps['clf']
+
+            # Calculate training accuracy on transformed data
+            X_train_tfidf = self.vectorizer.transform(X_train)
+            train_predictions = self.model.predict(X_train_tfidf)
+            train_accuracy = accuracy_score(y_train, train_predictions)
+
+            cv_scores = grid.cv_results_.get('mean_test_score')
+            cv_mean = float(grid.best_score_)
+            cv_std = float(grid.cv_results_['std_test_score'][grid.best_index_])
+
+        else:
+            # Create TF-IDF vectorizer
+            self.vectorizer = TfidfVectorizer(
+                max_features=max_features,
+                ngram_range=ngram_range,
+                min_df=2,
+                max_df=0.8,
+                sublinear_tf=True
+            )
+
+            # Fit and transform training data
+            X_train_tfidf = self.vectorizer.fit_transform(X_train)
+            print(f"TF-IDF features: {X_train_tfidf.shape[1]}")
+
+            # Initialize and train model
+            self.model = self._get_model(self.model_type, class_weight=class_weight)
+            self.model.fit(X_train_tfidf, y_train)
+
+            # Calculate training accuracy
+            train_predictions = self.model.predict(X_train_tfidf)
+            train_accuracy = accuracy_score(y_train, train_predictions)
+
+            # Cross-validation score
+            cv_scores = cross_val_score(self.model, X_train_tfidf, y_train, cv=cv)
+            cv_mean = float(cv_scores.mean())
+            cv_std = float(cv_scores.std())
         
         self.is_trained = True
         
         metrics = {
             'model_type': self.model_type,
             'train_accuracy': train_accuracy,
-            'cv_mean': cv_scores.mean(),
-            'cv_std': cv_scores.std(),
+            'cv_mean': cv_mean if tune_params else float(cv_scores.mean()),
+            'cv_std': cv_std if tune_params else float(cv_scores.std()),
             'num_features': X_train_tfidf.shape[1],
             'num_intents': len(self.intent_labels)
         }
